@@ -7,6 +7,10 @@
 
 <h3>@Model.Name</h3>
 <ul>
-    <li>@Model.MembershipType.Name</li>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @if (@Model.Birthday.HasValue)
+    {
+        <li>Bithdate: @Model.Birthday.Value.ToShortDateString()</li>
+    }
 </ul>
 
